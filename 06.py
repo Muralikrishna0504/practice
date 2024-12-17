@@ -11,5 +11,11 @@ def reverse_digit(n):
         return ''
     reversed=str(n%10)+str(reverse_digit(n//10))
     return reversed
-
-print(reverse_digit(1234))
+def palindrome_check(n):
+    reversed=reverse_digit(n)
+    flag=False
+    if reversed==str(n):
+        flag=True
+    return reversed,flag
+n=int(input('Enter a number: '))
+print(palindrome_check(n))
